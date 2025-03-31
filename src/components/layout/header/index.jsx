@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import Colorlogonobackground from "../../../../public/assets/images/RealSales-official-logo/For Web/png/Color logo - no background.png"
 import AddIcCallIcon from '@mui/icons-material/AddIcCall';
+import BookAdemo from '../../../common/bookAdemo';
 // "/assets/images/RealSales-official-logo/Color logo - no background.png"
 
 const Header = () => {
@@ -14,7 +15,7 @@ const Header = () => {
     };
 
   return (
-    <header className="main-header sticky top-0 z-50 bg-[#060606]">
+    <header className="main-header sticky top-0 z-50 bg-[#060606] h-[70px]">
       <div className="page-container mx-auto px-4 container">
         <nav className="main-nav flex justify-between items-center py-4">
           <Link href="/" className="logo">
@@ -46,10 +47,7 @@ const Header = () => {
 
           {/* Call to Action Buttons */}
           <div className="header-btn hidden md:flex items-center space-x-4">
-            <Link href="#" className="page-btn border-b-[2px] border-dolid border-white bg-[#FFDE5A] text-[#060606] flex items-center justify-center gap-2 px-10 py-1 rounded hover:bg-[#FFDE5A]">
-              Book a Demo
-              <AddIcCallIcon style={{fontSize: "16px"}}/>
-            </Link>
+            <BookAdemo icon={<AddIcCallIcon style={{fontSize: "16px"}}/>}/>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -77,9 +75,7 @@ const Header = () => {
                 <li className="py-2 border-b text-white"><Link href="/industries">Industries</Link></li>
                 <li className="py-2 border-b text-white"><Link href="/faq">FAQ</Link></li>
                 <li className="py-4">
-                  <Link href="#" className="border-b-[2px] border-dolid border-white bg-[#FFDE5A] text-[#060606] flex items-center justify-center gap-2 px-10 py-1 rounded hover:bg-[#FFDE5A]">
-                    Book a Demo
-                  </Link>
+                  <BookAdemo icon={<AddIcCallIcon style={{fontSize: "16px"}}/>}/>
                 </li>
               </ul>
             </div>
